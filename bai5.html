@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Ham nhan vao 3 so a b c. Neu a b c la 3 canh cua 1 tac giac thi tra ve dien tich cua tam giac
+        // Nhap vao mang va 1 so. Dem lan xuat hien cua x trong mang
+        let x = +prompt ('Nhập x')
+        function count(array, x){
+            let Count = 0
+            for (let i = 0; i< array.length; i++){
+                if (x == array[i]){
+                    Count++
+                }
+            }
+            return Count;
+        }
+        let Arr = [1,2,3,4,5,12,45,2,5,34,6,12,42,2];
+        document.write(count(Arr,x));
+
+        // Nhap vao mang tim so lon thu 2 trong mang
+        let Arr2 = [1,2,3,4,5,12,45,2,5,34,6,12,42,2];
+
+        function Max2(array) {
+            let Max = array[0];
+            let Maxsecond = 0;
+            let Min = 0;
+            for (let i = 0; i < array.length; i++) {
+                if(array[i] < Min) {
+                    Min = array[i];
+                }
+                if (array[i] > Max) {
+                    Maxsecond = Max;
+                    Max = array[i];
+                } else if (array[i] > Maxsecond && array[i] < Max) {
+                    Maxsecond = array[i];
+                }
+            }
+            return Maxsecond;
+        }
+        document.write(Arr2 +'<br>');
+        document.write(Max2(Arr2));
+    </script>
+</body>
+
+</html>
